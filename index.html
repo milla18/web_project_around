@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Camila Cavalcante" />
+    <meta name="description" content="Projeto 7 da tripleten" />
+    <meta name="keywords" content="Javascript Basico" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Galeria Responsiva</title>
+  </head>
+  <body>
+    <script src="index.js"></script>
+    <div class="page">
+      <header class="header">
+        <img class="header__image" src="./images/Vector.png" alt="Logo" />
+      </header>
+      display: none;
+      <main class="content">
+        <section class="profile">
+          <img class="profile__image" src="./images/perfil.jpg" alt="Perfil" />
+          <div class="profile__content">
+            <div class="profile__content-title">
+              <h2 class="profile__name">Jacques Cousteau</h2>
+
+              <button
+                class="profile__edit"
+                type="button"
+                onclick="editar()"
+              ></button>
+            </div>
+            <p class="profile__paragraph">Explorador</p>
+          </div>
+          <button class="profile__add" type="button"></button>
+        </section>
+
+        <section class="gallery">
+          <div class="card">
+            <img class="card__image" src="./images/teste2.jpg" alt="Vale" />
+            <div class="card__content">
+              <h2 class="card__text">Vale de Yosemite</h2>
+              <button class="card__heart" type="button"></button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img class="card__image" src="./images/lago.png" alt="Lago" />
+            <div class="card__content">
+              <h2 class="card__text">Lago Louise</h2>
+              <button class="card__heart" type="button"></button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              class="card__image"
+              src="./images/montanhas.png"
+              alt="Montanhas"
+            />
+            <div class="card__content">
+              <h2 class="card__text">Montanhas Care...</h2>
+              <button class="card__heart" type="button"></button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img class="card__image" src="./images/latemar.png" alt="Latema" />
+            <div class="card__content">
+              <h2 class="card__text">Latemar</h2>
+              <button class="card__heart" type="button"></button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img class="card__image" src="./images/parque.png" alt="Parque" />
+            <div class="card__content">
+              <h2 class="card__text">Parque Nacional</h2>
+              <button class="card__heart" type="button"></button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img class="card__image" src="./images/lagodi.png" alt="LagoDi" />
+            <div class="card__content">
+              <h2 class="card__text">Lago di Braies</h2>
+              <button class="card__heart" type="button"></button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright">&copy;2024 Around The U.S.</p>
+      </footer>
+
+      <div class="edit__forms">
+        <div class="close">
+          <img
+            class="close__image"
+            src="images/Close Icon.png"
+            alt="fechar"
+            onclick="fechar()"
+          />
+
+          <form class="form">
+            <h1 class="form__title">Editar Perfil</h1>
+            <input
+              class="form__item"
+              type="text"
+              placeholder="Nome"
+              id="nome"
+              name="texto"
+              required
+            />
+            <input
+              class="form__item"
+              type="text"
+              placeholder="Bibliografia"
+              id="bibliografia"
+              name="texto"
+              required
+            />
+
+            <button class="form__button" onclick="salvar(event)">Salvar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
