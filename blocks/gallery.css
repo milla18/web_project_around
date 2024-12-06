@@ -10,6 +10,25 @@
   height: 361px;
   border-radius: 10px 10px;
   background-color: #ffffff;
+  position: relative;
+}
+
+.card__trash {
+  background-image: url(../images/Trash.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 18px;
+  height: 19.3px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 18px;
+}
+
+.card__trash:hover {
+  opacity: 0.6;
+  transition: 0.6s;
 }
 
 .card__image {
@@ -17,6 +36,12 @@
   width: 100%;
   height: 282px;
 }
+
+.page__opacity {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
 .card__content {
   border-radius: 10px 10px;
   margin: 0;
@@ -38,8 +63,24 @@
   overflow: hidden;
 }
 
-.card__heart {
+.heart__white {
   background-image: url(../images/Group.svg);
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  width: 21px;
+  margin-right: 15px;
+  border: none;
+}
+
+.heart__white:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.heart__black {
+  background-image: url(../images/Union.png);
   cursor: pointer;
   background-repeat: no-repeat;
   background-color: transparent;

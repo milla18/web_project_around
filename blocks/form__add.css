@@ -1,4 +1,4 @@
-.edit__forms {
+.form__add {
   display: none;
   justify-content: center;
   position: fixed;
@@ -8,7 +8,10 @@
   right: 0;
 }
 
-.close {
+.form__open {
+  display: block;
+}
+.close__add {
   margin-top: 25vh;
   position: relative;
   border-radius: 10px;
@@ -16,7 +19,7 @@
   width: 430px;
   height: 330px;
 }
-.close__image {
+.close__add-image {
   position: absolute;
   right: -37px;
   width: 40px;
@@ -25,17 +28,17 @@
   cursor: pointer;
 }
 
-.close__image:hover {
+.close__add-image:hover {
   opacity: 0.6;
   transition: 0.6s;
 }
-.form {
+.second__form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.form__title {
+.second__title {
   margin-top: 34px;
   font-family: Inter;
   font-size: 24px;
@@ -46,7 +49,7 @@
   margin-bottom: 54px;
 }
 
-.form__item {
+.second__item {
   border: none;
   width: 358px;
   height: 27px;
@@ -57,28 +60,17 @@
   border-bottom: 1px solid #545454;
 }
 
-.form__error {
-  visibility: hidden;
-  margin: 0;
-  font-family: Inter;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 14.52px;
-  color: #ff0000;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-.form__error_active {
-  visibility: visible;
-}
-
-.form__button {
+.second__button {
   margin-top: 19px;
   width: 358px;
   height: 50px;
   background-color: #000000;
   color: #ffffff;
+}
+
+.second__button:hover {
+  opacity: 0.8;
+  transition: 0.8s;
 }
 
 .form__button_error {
@@ -87,33 +79,28 @@
   background-color: #ffffff;
 }
 
-.form__button:hover {
-  opacity: 0.8;
-  transition: 0.8s;
-}
-
 /* layout de 320px */
 @media (max-width: 767px) {
-  .edit__forms {
+  .form__add {
     margin-left: 19px;
   }
 
-  .close {
+  .close__add {
     margin-top: 7vh;
     width: 282px;
     height: 322px;
   }
-  .close__image {
+  .close__add-image {
     width: 26px;
     height: 26px;
     right: 0;
   }
-  .form {
+  .second__form {
     width: 282px;
     height: 322px;
   }
 
-  .form__title {
+  .second__title {
     margin-top: 25px;
     font-family: Inter;
     font-size: 18px;
@@ -123,13 +110,13 @@
     margin-bottom: 76px;
   }
 
-  .form__item {
+  .second__item {
     width: 238px;
     height: 26px;
     margin-bottom: 30px;
   }
 
-  .form__button {
+  .second__button {
     margin-top: 16px;
     width: 238px;
     height: 46px;

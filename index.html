@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Camila Cavalcante" />
-    <meta name="description" content="Projeto 7 da tripleten" />
+    <meta name="description" content="Projeto 8 da tripleten" />
     <meta name="keywords" content="Javascript Basico" />
     <link rel="stylesheet" href="./pages/index.css" />
     <title>Galeria Responsiva</title>
   </head>
   <body>
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
+    <script src="validate.js" defer></script>
+
     <div class="page">
       <header class="header">
         <img class="header__image" src="./images/Vector.png" alt="Logo" />
       </header>
-      display: none;
+
       <main class="content">
         <section class="profile">
           <img class="profile__image" src="./images/perfil.jpg" alt="Perfil" />
@@ -26,66 +28,29 @@
               <button
                 class="profile__edit"
                 type="button"
-                onclick="editar()"
+                onclick="edit()"
               ></button>
             </div>
             <p class="profile__paragraph">Explorador</p>
           </div>
-          <button class="profile__add" type="button"></button>
+          <button
+            class="profile__add"
+            onclick="openFormAdd()"
+            type="button"
+          ></button>
         </section>
 
         <section class="gallery">
-          <div class="card">
-            <img class="card__image" src="./images/teste2.jpg" alt="Vale" />
-            <div class="card__content">
-              <h2 class="card__text">Vale de Yosemite</h2>
-              <button class="card__heart" type="button"></button>
+          <template id="cards">
+            <div class="card">
+              <button class="card__trash"></button>
+              <img class="card__image" />
+              <div class="card__content">
+                <h2 class="card__text"></h2>
+                <button class="heart__white" type="button"></button>
+              </div>
             </div>
-          </div>
-
-          <div class="card">
-            <img class="card__image" src="./images/lago.png" alt="Lago" />
-            <div class="card__content">
-              <h2 class="card__text">Lago Louise</h2>
-              <button class="card__heart" type="button"></button>
-            </div>
-          </div>
-
-          <div class="card">
-            <img
-              class="card__image"
-              src="./images/montanhas.png"
-              alt="Montanhas"
-            />
-            <div class="card__content">
-              <h2 class="card__text">Montanhas Care...</h2>
-              <button class="card__heart" type="button"></button>
-            </div>
-          </div>
-
-          <div class="card">
-            <img class="card__image" src="./images/latemar.png" alt="Latema" />
-            <div class="card__content">
-              <h2 class="card__text">Latemar</h2>
-              <button class="card__heart" type="button"></button>
-            </div>
-          </div>
-
-          <div class="card">
-            <img class="card__image" src="./images/parque.png" alt="Parque" />
-            <div class="card__content">
-              <h2 class="card__text">Parque Nacional</h2>
-              <button class="card__heart" type="button"></button>
-            </div>
-          </div>
-
-          <div class="card">
-            <img class="card__image" src="./images/lagodi.png" alt="LagoDi" />
-            <div class="card__content">
-              <h2 class="card__text">Lago di Braies</h2>
-              <button class="card__heart" type="button"></button>
-            </div>
-          </div>
+          </template>
         </section>
       </main>
       <footer class="footer">
@@ -98,7 +63,7 @@
             class="close__image"
             src="images/Close Icon.png"
             alt="fechar"
-            onclick="fechar()"
+            onclick="closing()"
           />
 
           <form class="form">
@@ -109,19 +74,89 @@
               placeholder="Nome"
               id="nome"
               name="texto"
+              minlength="2"
+              maxlength="40"
               required
             />
+            <p class="form__error form__error_active"></p>
+
             <input
               class="form__item"
               type="text"
               placeholder="Bibliografia"
               id="bibliografia"
               name="texto"
+              minlength="2"
+              maxlength="200 "
               required
             />
+            <p class="form__error form__error_active"></p>
 
-            <button class="form__button" onclick="salvar(event)">Salvar</button>
+            <button
+              disabled
+              class="form__button form__button_error"
+              type="submit"
+            >
+              Salvar
+            </button>
           </form>
+        </div>
+      </div>
+      <!-- form 2 -->
+      <div class="form__add">
+        <div class="close__add">
+          <img
+            class="close__add-image"
+            src="images/Close Icon.png"
+            alt="fechar"
+            onclick="closed()"
+          />
+          <form class="second__form form">
+            <h2 class="second__title">Novo local</h2>
+            <input
+              class="second__item"
+              type="text"
+              placeholder="Titulo"
+              id="titulo"
+              name="texto"
+              minlength="2"
+              maxlength="30"
+              required
+            />
+            <p class="form__error form__error_active"></p>
+
+            <input
+              class="second__item"
+              type="url"
+              placeholder="Link da imagem"
+              id="link"
+              name="texto"
+              required
+            />
+            <p class="form__error form__error_active"></p>
+
+            <button
+              disabled
+              class="second__button form__button_error"
+              type="submit"
+            >
+              Criar
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card__popup">
+        <div class="close__popup form">
+          <img
+            class="close__popup-img"
+            src="images/Close Icon.png"
+            alt="fechar"
+            onclick="closures()"
+          />
+
+          <img class="imagem__popup" src="" alt="" />
+          <h2 class="title___popup"></h2>
         </div>
       </div>
     </div>
