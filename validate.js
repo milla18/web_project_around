@@ -46,7 +46,6 @@ enableValidation({
   inputErrorClass: "form__input_error",
   errorClass: "form__error_active",
 });
-enableValidation({});
 
 enableValidation({
   formSelector: ".second__form",
@@ -56,4 +55,3 @@ enableValidation({
   inputErrorClass: "form__input_error",
   errorClass: "form__error_active",
 });
-enableValidation({});

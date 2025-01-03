@@ -14,3 +14,7 @@ DevTools, VSCode e W3C Markup Validator para validar html,css,javaScript,git,git
 
 Durante o desenvolvimento deste projeto, aprendi e desenvolvi as seguintes habilidades:
 Manipulação de HTML e CSS com JavaScript Manipulação de Objetos em JavaScript, Manipulação de Eventos, Melhoria da Experiência do Usuário Validação de Formulários o conteúdo e o estilo de uma página. Desenvolvimento Responsivo:Criação de layouts que se adaptam a diferentes tamanhos de tela e dispositivos.
+
+# LINK DO GH PAGES
+
+https://milla18.github.io/web_project_around/

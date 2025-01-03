@@ -17,7 +17,7 @@
   border-radius: 10px;
   background-color: #ffffff;
   width: 430px;
-  height: 330px;
+  min-height: 330px;
 }
 .close__add-image {
   position: absolute;
@@ -61,7 +61,6 @@
 }
 
 .second__button {
-  margin-top: 19px;
   width: 358px;
   height: 50px;
   background-color: #000000;
