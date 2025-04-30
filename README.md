@@ -1,6 +1,7 @@
 # Tripleten web_project_around
 
-JavaScript Básico e Trabalho com o DOM
+Este é o projeto 10 do curso da Tripleten
+o objetivo do projeto foi praticar a criação de um site de galeria de imagens utilizando POO JS e estruturaçao modularizada de código Import/Export
 
 # Projeto Web Responsivo
 
@@ -18,3 +19,5 @@ Manipulação de HTML e CSS com JavaScript Manipulação de Objetos em JavaScrip
 # LINK DO GH PAGES
 
 https://milla18.github.io/web_project_around/
+
+© 2024 Camila Cavalcante. Projeto acadêmico realizado para a TripleTen.
