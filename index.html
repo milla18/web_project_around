@@ -4,14 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Camila Cavalcante" />
-    <meta name="description" content="Projeto 8 da tripleten" />
-    <meta name="keywords" content="Javascript Basico" />
+    <meta name="description" content="Projeto 10 da tripleten" />
+    <meta name="keywords" content="Introdução da POO" />
     <link rel="stylesheet" href="./pages/index.css" />
     <title>Galeria Responsiva</title>
   </head>
   <body>
-    <script src="index.js" defer></script>
-    <script src="validate.js" defer></script>
+    <script type="module" src="./index.js"></script>
 
     <div class="page">
       <header class="header">
@@ -25,19 +24,11 @@
             <div class="profile__content-title">
               <h2 class="profile__name">Jacques Cousteau</h2>
 
-              <button
-                class="profile__edit"
-                type="button"
-                onclick="edit()"
-              ></button>
+              <button class="profile__edit" type="button"></button>
             </div>
             <p class="profile__paragraph">Explorador</p>
           </div>
-          <button
-            class="profile__add"
-            onclick="openFormAdd()"
-            type="button"
-          ></button>
+          <button class="profile__add" type="button"></button>
         </section>
 
         <section class="gallery">
@@ -59,12 +50,7 @@
 
       <div class="edit__forms">
         <div class="close">
-          <img
-            class="close__image"
-            src="images/Close Icon.png"
-            alt="fechar"
-            onclick="closing()"
-          />
+          <img class="close__image" src="images/Close Icon.png" alt="fechar" />
 
           <form class="form">
             <h1 class="form__title">Editar Perfil</h1>
@@ -78,7 +64,7 @@
               maxlength="40"
               required
             />
-            <p class="form__error form__error_active"></p>
+            <span id="nome-error" class="form__error"></span>
 
             <input
               class="form__item"
@@ -90,7 +76,7 @@
               maxlength="200 "
               required
             />
-            <p class="form__error form__error_active"></p>
+            <span id="bibliografia-error" class="form__error"></span>
 
             <button
               disabled
@@ -109,7 +95,6 @@
             class="close__add-image"
             src="images/Close Icon.png"
             alt="fechar"
-            onclick="closed()"
           />
           <form class="second__form form">
             <h2 class="second__title">Novo local</h2>
@@ -123,7 +108,7 @@
               maxlength="30"
               required
             />
-            <p class="form__error form__error_active"></p>
+            <span id="titulo-error" class="form__error"></span>
 
             <input
               class="second__item"
@@ -133,7 +118,7 @@
               name="texto"
               required
             />
-            <p class="form__error form__error_active"></p>
+            <span id="link-error" class="form__error"></span>
 
             <button
               disabled
@@ -152,7 +137,6 @@
             class="close__popup-img"
             src="images/Close Icon.png"
             alt="fechar"
-            onclick="closures()"
           />
 
           <img class="imagem__popup" src="" alt="" />
