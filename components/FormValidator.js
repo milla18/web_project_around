@@ -2,18 +2,12 @@ export class FormValidator {
   constructor(config, formElement) {
     this._config = config;
     this._formElement = formElement;
-    this._inputList = Array.from(
-      this._formElement.querySelectorAll(this._config.inputSelector)
-    );
-    this._submitButton = this._formElement.querySelector(
-      this._config.submitButtonSelector
-    );
+    this._inputList = Array.from(this._formElement.querySelectorAll(this._config.inputSelector));
+    this._submitButton = this._formElement.querySelector(this._config.submitButtonSelector);
   }
 
   _checkInputValidity(inputElement) {
-    const errorElement = this._formElement.querySelector(
-      `#${inputElement.id}-error`
-    );
+    const errorElement = this._formElement.querySelector(`#${inputElement.id}-error`);
     if (!inputElement.validity.valid) {
       errorElement.textContent = inputElement.validationMessage;
       errorElement.classList.add(this._config.errorClass);
