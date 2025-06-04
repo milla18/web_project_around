@@ -8,13 +8,14 @@
 .card {
   width: 282px;
   height: 361px;
-  border-radius: 10px 10px;
+  border-radius: 10px;
+  overflow: hidden;
   background-color: #ffffff;
   position: relative;
 }
 
 .card__trash {
-  background-image: url(../images/Trash.svg);
+  background-image: url("../../images/Trash.svg");
   background-repeat: no-repeat;
   background-color: transparent;
   width: 18px;
@@ -35,6 +36,8 @@
   max-width: 282px;
   width: 100%;
   height: 282px;
+  display: block;
+  object-fit: cover;
 }
 
 .page__opacity {
@@ -43,10 +46,8 @@
 }
 
 .card__content {
-  border-radius: 10px 10px;
   margin: 0;
   padding: 0;
-
   background-color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -64,7 +65,7 @@
 }
 
 .heart__white {
-  background-image: url(../images/Group.svg);
+  background-image: url("../../images/Group.svg");
   cursor: pointer;
   background-repeat: no-repeat;
   background-color: transparent;
@@ -80,7 +81,7 @@
 }
 
 .heart__black {
-  background-image: url(../images/Union.png);
+  background-image: url("../../images/Union.png");
   cursor: pointer;
   background-repeat: no-repeat;
   background-color: transparent;

@@ -6,11 +6,12 @@
     <meta name="author" content="Camila Cavalcante" />
     <meta name="description" content="Projeto 11 da tripleten" />
     <meta name="keywords" content="POO Avançado" />
-    <link rel="stylesheet" href="./pages/index.css" />
+    <link rel="stylesheet" href="./src/pages/index.css" />
     <title>Galeria Responsiva</title>
   </head>
+
   <body>
-    <script type="module" src="./index.js"></script>
+    <script type="module" src="./src/pages/index.js"></script>
 
     <div class="page">
       <header class="header">
@@ -19,14 +20,19 @@
 
       <main class="content">
         <section class="profile">
-          <img class="profile__image" src="./images/perfil.jpg" alt="Perfil" />
+          <div class="profile__image-wrapper">
+            <img class="profile__image" src="./images/perfil.jpg" alt="Perfil" />
+            <button class="update__image" type="button" title="Edit profile picture">
+              <img src="./images/lapis.png" alt="lapis" />
+            </button>
+          </div>
           <div class="profile__content">
-            <div class="profile__content-title">
-              <h2 class="profile__name">Jacques Cousteau</h2>
+            <!-- <div class="profile__content-title">
+            <h2 class="profile__name"></h2>
 
-              <button class="profile__edit" type="button"></button>
-            </div>
-            <p class="profile__paragraph">Explorador</p>
+            <button class="profile__edit" type="button"></button>
+          </div> -->
+            <!-- <p class="profile__paragraph"></p> -->
           </div>
           <button class="profile__add" type="button"></button>
         </section>
@@ -34,11 +40,11 @@
         <section class="gallery">
           <template id="cards">
             <div class="card">
-              <button class="card__trash"></button>
+              <button id="trash" class="card__trash"></button>
               <img class="card__image" />
               <div class="card__content">
                 <h2 class="card__text"></h2>
-                <button class="heart__white" type="button"></button>
+                <button id="heart" type="button"></button>
               </div>
             </div>
           </template>
@@ -78,24 +84,14 @@
             />
             <span id="bibliografia-error" class="form__error"></span>
 
-            <button
-              disabled
-              class="form__button form__button_error"
-              type="submit"
-            >
-              Salvar
-            </button>
+            <button disabled class="form__button form__button_error" type="submit">Salvar</button>
           </form>
         </div>
       </div>
       <!-- form 2 -->
       <div class="form__add">
         <div class="close__add">
-          <img
-            class="close__add-image"
-            src="images/Close Icon.png"
-            alt="fechar"
-          />
+          <img class="close__add-image" src="images/Close Icon.png" alt="fechar" />
           <form class="second__form form">
             <h2 class="second__title">Novo local</h2>
             <input
@@ -120,24 +116,48 @@
             />
             <span id="link-error" class="form__error"></span>
 
-            <button
-              disabled
-              class="second__button form__button_error"
-              type="submit"
-            >
-              Criar
+            <button disabled class="second__button form__button_error" type="submit">Criar</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="edit__avatar">
+        <div class="close__add">
+          <img class="close__add-image" src="images/Close Icon.png" alt="fechar" />
+          <form class="change__avatar form">
+            <h2 class="second__title">Alterar foto do perfil</h2>
+            <input
+              class="avatar__link"
+              type="url"
+              placeholder="Link da imagem"
+              id="link"
+              name="texto"
+              required
+            />
+            <span id="link-error" class="form__error"></span>
+
+            <button disabled class="edit__profile__image form__button_error" type="submit">
+              Alterar
             </button>
           </form>
         </div>
       </div>
 
+      <div class="popup__confirmation">
+        <div class="close__add">
+          <img class="close__add-image" src="images/Close Icon.png" alt="fechar" />
+          <form class="form">
+            <h2 class="second__title">Certeza que deseja apagar o card?</h2>
+            <button class="popup__confirm__deletion form__button" type="submit">Apagar</button>
+            <button class="popup__cancel-button form__button" type="submit">Cancelar</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- </form> -->
       <div class="card__popup">
         <div class="close__popup form">
-          <img
-            class="close__popup-img"
-            src="images/Close Icon.png"
-            alt="fechar"
-          />
+          <img class="close__popup-img" src="images/Close Icon.png" alt="fechar" />
 
           <img class="imagem__popup" src="" alt="" />
           <h2 class="title___popup"></h2>

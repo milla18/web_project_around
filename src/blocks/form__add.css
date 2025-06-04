@@ -72,10 +72,42 @@
   transition: 0.8s;
 }
 
+.edit__profile__image {
+  width: 358px;
+  height: 50px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.edit__profile__image:hover {
+  opacity: 0.8;
+  transition: 0.8s;
+}
+
 .form__button_error {
   width: 358px;
   height: 50px;
   background-color: #ffffff;
+}
+
+.edit__avatar {
+  display: none;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.popup__confirmation {
+  display: none;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 /* layout de 320px */
